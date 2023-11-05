@@ -83,7 +83,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             speedLabel.text = String(format: "%.0f km/h", speedInKmPerHour)
             if speedInKmPerHour > highestSpeed {
                 highestSpeed = speedInKmPerHour
-                highestSpeedLabel.text = String(format: "Highest: %.0f km/h", highestSpeed)
+                highestSpeedLabel.text = String(format: "Max: %.0f km/h", highestSpeed)
             }
         } else {
             speedLabel.text = "0 km/h"
@@ -94,6 +94,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @objc func clearHighestSpeed() {
         highestSpeed = 0.0
-        highestSpeedLabel.text = "Highest: 0 km/h"
+        highestSpeedLabel.text = "Max: 0 km/h"
     }
 }
