@@ -24,7 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var highestSpeedLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Highest: 0 km/h"
+        label.text = "Max: 0 km/h"
         label.textColor = .red
         label.textAlignment = .center
         return label
@@ -34,7 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let clearButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("CLEAR", for: .normal)
+        button.setTitle(NSLocalizedString("CLEAR", comment: ""), for: .normal) // localize CLEAR button string
         button.backgroundColor = .red
         button.addTarget(self, action: #selector(clearHighestSpeed), for: .touchUpInside) // must be "self", ignore warning, otherwise reseting crashes the app
         return button
